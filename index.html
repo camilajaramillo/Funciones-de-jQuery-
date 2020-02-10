@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <style type="text/css">
+        .button {
+           display: inline
+        }
+        div.ex1 {
+            width: 1200px;
+            margin: auto;
+            border: 3px solid black;
+        }
+        .p{
+            display: inline-block;
+            text-align: center;
+        }
+        .h1{
+            text-align: center;
+        }
+                
+    </style>
+</head>
+<body>
+    
+    <div class="ex1">
+        <h1>AddClass</h1>
+        <p class="p1"> Click the button to add class "red" to this paragraph</p>
+        <button type="button" class="bt1">AddClass</button>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $("button.bt1").click(function(){
+                $("p.p1").css("color","red");
+            })
+        });
+        </script>
+
+    <div class="ex1">
+        <h1>AddClass</h1>
+        <p class="p2"> Click the button to slidetoggle a hidden image</p>
+        <button type="button" class="bt2">AddClass</button>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $("button.bt2").click(function(){
+                $("p.p2").slideToggle();
+            })
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("h1").click(function(){
+                $("h1").show();
+            })
+        });
+    </script>
+
+
+    <div class="ex1">
+        <h1>AddClass</h1>
+        <p class="p3"> Click the button to append a new paragraph</p>
+        <button type="button" class="bt3">AddClass</button>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $("button.bt3").click(function(){
+                $("p.p3").append("p.p3");
+            })
+        });
+    </script>
+
+</body>
+</html>
